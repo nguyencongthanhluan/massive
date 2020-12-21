@@ -1,0 +1,180 @@
+.portfolio {
+  .heading-title {
+    @include heading-title;
+    h3 {
+      @include h3-text;
+    }
+    p {
+      @include p-text;
+    }
+  }
+  .portfolio-menu {
+    width: 100%;
+    ul {
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      li {
+        font-size: $fs-0;
+        color: #a4a4a4;
+        margin: 0 15px;
+        transition: all.5s;
+        &:hover {
+          cursor: pointer;
+          color: $color-base-1;
+        }
+      }
+      .active {
+        color: $color-base-1;
+      }
+    }
+  }
+  .portfolio-item {
+    width: 100%;
+    .item {
+      padding: 0 10px;
+      &:hover {
+        .portfolio-hover {
+          opacity: 1;
+          .action-btn {
+            transform: translateY(60%);
+          }
+          .portfolio-description {
+            transform: translateY(-55%);
+          }
+        }
+      }
+      img {
+        width: 100%;
+        padding: 10px 0;
+        position: relative;
+      }
+      .portfolio-hover {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        bottom: 10px;
+        left: 10px;
+        margin: 0;
+        transition: all 0.3s;
+        opacity: 0;
+        border: 20px solid rgba(0, 0, 0, 0.1);
+        background-color: rgba(255, 255, 255, 0.9);
+        text-align: center;
+        .action-btn {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          transition: all 0.3s;
+          transform: translateY(-35%);
+          text-align: center;
+          opacity: 1;
+          font-size: 35px;
+          @include extra-small {
+            font-size: 20px;
+          }
+          @include medium {
+            font-size: 24px;
+          }
+          @include large {
+            font-size: 24px;
+          }
+          a {
+            color: $color-base-1;
+          }
+        }
+        .portfolio-description {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          transition: all 0.3s;
+          transform: translateY(25%);
+          opacity: 1;
+          @include extra-small {
+            bottom: -40px;
+          }
+          @include small {
+            bottom: -40px;
+          }
+          @include medium {
+            bottom: -40px;
+          }
+          @include large {
+            bottom: -40px;
+          }
+          h4 {
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-size: 14px;
+            color: $color-base-1;
+            @include extra-small {
+              font-size: 12px;
+            }
+            @include medium {
+              font-size: 12px;
+            }
+            @include large {
+              font-size: 12px;
+            }
+            a {
+              text-decoration: none;
+              color: $color-base-1;
+              &:hover {
+                color: $color-base-0;
+              }
+            }
+          }
+          p {
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #757575;
+            font-size: 12px;
+            @include extra-small {
+              font-size: 10px;
+            }
+            @include medium {
+              font-size: 10px;
+            }
+            @include large {
+              font-size: 10px;
+            }
+            a {
+              text-decoration: none;
+              color: $color-base-1;
+              &:hover {
+                color: $color-base-0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.purchase-now {
+  color: #fff;
+  background-color: #222;
+  height: 180px;
+  .container {
+    height: 100%;
+    .row {
+      height: 100%;
+      align-items: center;
+      span {
+        color: $color-base-0;
+      }
+      a {
+        @include button(#fff, rgba(255, 255, 255, 0.2), 15px 30px, 4px, 1px);
+        &:hover {
+          background-color: $color-base-0;
+        }
+        &:focus {
+          outline: none;
+          border: none;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}

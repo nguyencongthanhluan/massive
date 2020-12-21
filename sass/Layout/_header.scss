@@ -1,0 +1,87 @@
+header {
+  .navbar {
+    overflow: hidden;
+    padding: 10px 30px;
+    transition: 0.4s;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+    @include extra-small {
+      background-color: #fff;
+      padding: 0 15px;
+    }
+    @include small {
+      background-color: #fff;
+      padding: 0 15px;
+    }
+    .navbar-brand {
+      img {
+        width: 110px;
+        font-weight: $fw-bold;
+        transition: 0.4s;
+        @include extra-small {
+          width: 70px;
+        }
+        @include small {
+          width: 70px;
+        }
+        @include medium {
+          width: 70px;
+        }
+      }
+    }
+    button {
+      border: none;
+      @include extra-small {
+        &:focus {
+          outline: none;
+        }
+      }
+      @include small {
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    .navbar-right {
+      .navbar-nav {
+        .nav-item {
+          margin-left: 10px;
+          @include extra-small {
+            border-top: 1px solid #f0f0f0;
+          }
+          @include small {
+            border-top: 1px solid #f0f0f0;
+          }
+          @include medium {
+            margin-left: 0;
+          }
+          .nav-link {
+            color: $color_base-1;
+            @include extra-small {
+              padding: 10px 10px;
+            }
+            &:hover {
+              color: $color_base-0;
+            }
+            &:focus {
+              outline: none;
+            }
+          }
+          .active {
+            color: $color_base-0;
+          }
+        }
+      }
+    }
+  }
+  .shrink {
+    background-color: #ffffff;
+    padding: 0 30px;
+    .navbar-brand {
+      img {
+        width: 70px !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,204 @@
+.price {
+  .container {
+    @include extra-small {
+      margin-top: 30rem;
+    }
+    @include small {
+      margin-top: 30rem;
+    }
+    .heading-title {
+      @include heading-title;
+      h3 {
+        @include h3-text;
+      }
+      p {
+        @include p-text;
+      }
+    }
+    .price-item {
+      border: 1px solid #e8e8e8;
+      background-color: #fff;
+      text-align: center;
+      padding: 50px;
+      h3 {
+        margin-top: 0;
+        margin-bottom: 2em;
+      }
+      .value {
+        border-top: 1px solid #e5e5e5;
+        border-bottom: 1px solid #e5e5e5;
+        h1 {
+          margin-bottom: 0;
+          span {
+            font-size: $fs-1;
+          }
+        }
+        p {
+          margin-top: 0;
+          font-size: 12px;
+          margin-bottom: 1.5em;
+        }
+      }
+      p {
+        margin-top: 2em;
+        margin-bottom: 3em;
+        line-height: 30px;
+      }
+      a {
+        @include button(#222, #fff, 15px 20px, none, 1px);
+        border: 1px solid #e8e8e8;
+        text-decoration: none;
+        transition: all.5s;
+        @include large {
+          padding: 5px 10px;
+        }
+        &:hover {
+          background-color: #222;
+          color: #fff;
+        }
+      }
+    }
+    .price-item-middle {
+      border: 1px solid #222;
+      background-color: #222;
+      text-align: center;
+      padding: 50px;
+      @include extra-small {
+        margin: 20px 0;
+      }
+      @include small {
+        margin: 20px 0;
+      }
+      @include medium {
+        margin: 20px 0;
+      }
+      h3 {
+        margin-top: 0;
+        margin-bottom: 2em;
+        color: $color-base-0;
+      }
+      .value {
+        border-top: 1px solid #e5e5e5;
+        border-bottom: 1px solid #e5e5e5;
+        h1 {
+          margin-bottom: 0;
+          color: #fff;
+          span {
+            font-size: $fs-1;
+            color: #fff;
+          }
+        }
+        p {
+          margin-top: 0;
+          font-size: 12px;
+          margin-bottom: 1.5em;
+          color: #fff;
+        }
+      }
+      p {
+        margin-top: 2em;
+        margin-bottom: 3em;
+        line-height: 30px;
+        color: #7d7d7d;
+      }
+      a {
+        @include button(#222, #fff, 15px 20px, none, 1px);
+        border: 1px solid #e8e8e8;
+        text-decoration: none;
+        transition: all.5s;
+        @include large {
+          padding: 5px 10px;
+        }
+        &:hover {
+          background-color: $color-base-0;
+          color: #fff;
+          border: 1px solid $color-base-0;
+        }
+      }
+    }
+  }
+  .purchase {
+    height: 400px;
+    background-color: #f8f8f8;
+    .container {
+      height: 100%;
+      @include extra-small {
+        margin-top: 0;
+        padding: 0;
+      }
+      @include small {
+        margin-top: 0;
+        padding: 0;
+      }
+      .row {
+        width: 60%;
+        margin: 4rem auto;
+        @include small {
+          width: 100%;
+        }
+        h2 {
+          color: $color-base-0;
+        }
+        p {
+          color: $color-base-2;
+        }
+        input {
+          padding: 25px 15px;
+          border: none;
+          &:focus {
+            outline: none;
+            box-shadow: none;
+          }
+          &::placeholder {
+            color: $color-base-3;
+          }
+        }
+        .subscribe {
+          padding-top: 14px;
+          @include extra-small {
+            padding-top: 20px;
+          }
+          a {
+            @include button(#fff, #333, 15px 15px, 3px, 1px);
+            text-decoration: none;
+            transition: all 0.5s;
+            @include extra-small {
+              padding: 15px 90px;
+            }
+            &:hover {
+              background-color: $color-base-0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .client {
+    .container {
+      @include extra-small {
+        margin-top: 0;
+      }
+      @include small {
+        margin-top: 0;
+      }
+      .row {
+        .heading-title {
+          @include heading-title;
+          h3 {
+            @include h3-text;
+          }
+          p {
+            @include p-text;
+          }
+        }
+        .client-carousel {
+          .client-item {
+            img {
+              width: 140px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

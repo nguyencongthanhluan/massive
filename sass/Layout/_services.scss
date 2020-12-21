@@ -1,0 +1,92 @@
+.services {
+  .container {
+    .row-1 {
+      .heading-title {
+        @include heading-title;
+        h3 {
+          @include h3-text;
+        }
+        p {
+          @include p-text;
+        }
+      }
+    }
+    .row-2 {
+      .item {
+        border: 1px solid #f2f2f2;
+        transition: all 0.5s;
+        i {
+          font-size: 30px;
+        }
+        p {
+          color: $color-base-2;
+        }
+        &:hover {
+          background-color: #222;
+          i {
+            color: $color-base-0;
+          }
+          h3 {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+.parallax-services {
+  overflow: hidden;
+  height: 500px;
+  background-image: url(../images/14.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  .container {
+    .services-carousel {
+      .services-item {
+        display: flex;
+        img {
+          @include extra-small {
+            width: 30%;
+          }
+          @include small {
+            width: 40%;
+          }
+        }
+        .item-content {
+          align-self: center;
+          margin-left: 5rem;
+          line-height: 30px;
+          h2 {
+            color: $color-base-0;
+          }
+          p {
+            color: #fff;
+            font-style: italic;
+            font-size: $fs-0 + 2;
+            margin-bottom: 2rem;
+          }
+          a {
+            text-decoration: none;
+            @include button(
+              #fff,
+              rgba(255, 255, 255, 0.2),
+              10px 20px,
+              4px,
+              1px
+            );
+            &:hover {
+              background-color: $color-base-0;
+            }
+            &:focus {
+              outline: none;
+              border: none;
+              box-shadow: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
